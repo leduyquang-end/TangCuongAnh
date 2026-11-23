@@ -1,0 +1,55 @@
+{
+  "config": {
+    "seed": 827,
+    "patch": 80,
+    "batch": 8,
+    "lr": 3e-05,
+    "decomposition_lr": 1e-06,
+    "structure": 0.142369,
+    "gradient_weight": 0.228751,
+    "decomposition_weight": 0.05,
+    "detail_weight": 0.455747,
+    "contrast_weight": 0.135058,
+    "validate_every": 2,
+    "edge_alignment_weight": 0.434312,
+    "initial_sha256": "9fe9c603d3b53a31eb66ab38528f8744378b7d0c5ed313637078ce301add82ab",
+    "loss_recipe": "ci_ag_banded_anchors_v1",
+    "extra_weights": {
+      "brightness_anchor": 12.0,
+      "entropy_anchor": 0.5,
+      "reference_pixels": 0.25,
+      "ci_objective": 1.727116,
+      "supported_edges": 3.616188
+    }
+  },
+  "limits": {
+    "MLI_relative": 0.01,
+    "E_relative": 0.01,
+    "CI_min": 0.24009663345832677,
+    "AG_min": 0.02856181655826641,
+    "PSNR_min": 15.132058627941259,
+    "SSIM_min": 0.6562056917038517,
+    "chroma_max": 0.056312050573203876,
+    "clipping_max": 0.01
+  },
+  "preservation_anchor": {
+    "MLI": 0.4436736571848063,
+    "CI": 0.21788097935906617,
+    "E": 7.500443546851791,
+    "AG": 0.02078372759768126,
+    "PSNR": 15.549043188860557,
+    "SSIM": 0.6910021227339039,
+    "clipped_fraction": 0.001192451690821256,
+    "z_fixed_pdf": 1.7319053057914844,
+    "awf_margin_six": -0.029230798367485433,
+    "pairs": 69,
+    "chroma_mae": 0.05329509522171988
+  },
+  "epochs": 6,
+  "calibration_frozen": {
+    "mode": "linear",
+    "contrast": 1.08,
+    "detail": 0.25,
+    "sharpen": 1.5
+  }
+}

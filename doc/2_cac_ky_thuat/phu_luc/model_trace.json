@@ -1,0 +1,5935 @@
+{
+  "checkpoint_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "config": {
+    "model": "checkpoints/model_current.pt",
+    "model_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+    "reference": "checkpoints/model_current.pt",
+    "reference_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+    "manifest": "data/split-local.json",
+    "manifest_sha256": "b8f81a92034442604ee8527e32d672638026ab4b556ce450d7ac4bac4534ca2f",
+    "calibration": {
+      "mode": "linear",
+      "contrast": 1.08,
+      "detail": 0.25,
+      "sharpen": 1.4
+    },
+    "user_approved_as_final": true,
+    "selection_reason": "User explicitly approved this checkpoint and requested removal of older versions.",
+    "architecture": "KinD Decomposition + Attention U-Net + Curve CNN",
+    "training_provenance": "experiments/ag_refinement/run_four_metric_curriculum/selection.json",
+    "evaluation_report": "reports/BAO_CAO_BAN_DA_CHOT_SO_VOI_AWF.md",
+    "rgb_preservation": {
+      "blend": 1.0,
+      "gain": 0.5
+    },
+    "luminance_refinement": {
+      "contrast": 1.02,
+      "lift": 0.007
+    },
+    "approval_date": "2026-11-13"
+  },
+  "counts": {
+    "decomposition": 235876,
+    "restoration": 1963407,
+    "adjustment": 18680
+  },
+  "total": 2217963,
+  "traces": {
+    "image_400x600": {
+      "input": [
+        1,
+        3,
+        400,
+        600
+      ],
+      "raw_output": [
+        1,
+        3,
+        400,
+        600
+      ],
+      "final_output": [
+        1,
+        3,
+        400,
+        600
+      ],
+      "layers": [
+        {
+          "name": "decomposition.first",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              3,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            400,
+            600
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 896
+        },
+        {
+          "name": "decomposition.second",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              200,
+              300
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            200,
+            300
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 18496
+        },
+        {
+          "name": "decomposition.bottom",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              100,
+              150
+            ]
+          ],
+          "output": [
+            1,
+            128,
+            100,
+            150
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 73856
+        },
+        {
+          "name": "decomposition.up_second",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              1,
+              128,
+              100,
+              150
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            200,
+            300
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": false,
+          "parameters": 32768
+        },
+        {
+          "name": "decomposition.decode_second",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              128,
+              200,
+              300
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            200,
+            300
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 73792
+        },
+        {
+          "name": "decomposition.up_first",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              1,
+              64,
+              200,
+              300
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            400,
+            600
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": false,
+          "parameters": 8192
+        },
+        {
+          "name": "decomposition.decode_first",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            400,
+            600
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 18464
+        },
+        {
+          "name": "decomposition.light_features",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            400,
+            600
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 9248
+        },
+        {
+          "name": "decomposition.reflectance",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            3,
+            400,
+            600
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 99
+        },
+        {
+          "name": "decomposition.illumination",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            1,
+            400,
+            600
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 65
+        },
+        {
+          "name": "restoration.encoders.0.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              4,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            400,
+            600
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 592
+        },
+        {
+          "name": "restoration.encoders.0.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            400,
+            600
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2320
+        },
+        {
+          "name": "restoration.encoders.1.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              200,
+              300
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            200,
+            300
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 4640
+        },
+        {
+          "name": "restoration.encoders.1.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              200,
+              300
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            200,
+            300
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 9248
+        },
+        {
+          "name": "restoration.encoders.2.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              100,
+              150
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            100,
+            150
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 18496
+        },
+        {
+          "name": "restoration.encoders.2.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              100,
+              150
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            100,
+            150
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 36928
+        },
+        {
+          "name": "restoration.encoders.3.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              50,
+              75
+            ]
+          ],
+          "output": [
+            1,
+            128,
+            50,
+            75
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 73856
+        },
+        {
+          "name": "restoration.encoders.3.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              128,
+              50,
+              75
+            ]
+          ],
+          "output": [
+            1,
+            128,
+            50,
+            75
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 147584
+        },
+        {
+          "name": "restoration.encoders.4.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              128,
+              25,
+              38
+            ]
+          ],
+          "output": [
+            1,
+            256,
+            25,
+            38
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 295168
+        },
+        {
+          "name": "restoration.encoders.4.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              256,
+              25,
+              38
+            ]
+          ],
+          "output": [
+            1,
+            256,
+            25,
+            38
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 590080
+        },
+        {
+          "name": "restoration.decoders.0.up",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              1,
+              256,
+              25,
+              38
+            ]
+          ],
+          "output": [
+            1,
+            128,
+            50,
+            76
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 131200
+        },
+        {
+          "name": "restoration.decoders.0.skip_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              128,
+              50,
+              75
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            50,
+            75
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 8256
+        },
+        {
+          "name": "restoration.decoders.0.gate_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              128,
+              50,
+              75
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            50,
+            75
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 8256
+        },
+        {
+          "name": "restoration.decoders.0.score",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              50,
+              75
+            ]
+          ],
+          "output": [
+            1,
+            1,
+            50,
+            75
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 65
+        },
+        {
+          "name": "restoration.decoders.0.fuse.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              256,
+              50,
+              75
+            ]
+          ],
+          "output": [
+            1,
+            128,
+            50,
+            75
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 295040
+        },
+        {
+          "name": "restoration.decoders.0.fuse.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              128,
+              50,
+              75
+            ]
+          ],
+          "output": [
+            1,
+            128,
+            50,
+            75
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 147584
+        },
+        {
+          "name": "restoration.decoders.1.up",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              1,
+              128,
+              50,
+              75
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            100,
+            150
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 32832
+        },
+        {
+          "name": "restoration.decoders.1.skip_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              100,
+              150
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            100,
+            150
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2080
+        },
+        {
+          "name": "restoration.decoders.1.gate_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              100,
+              150
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            100,
+            150
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2080
+        },
+        {
+          "name": "restoration.decoders.1.score",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              100,
+              150
+            ]
+          ],
+          "output": [
+            1,
+            1,
+            100,
+            150
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 33
+        },
+        {
+          "name": "restoration.decoders.1.fuse.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              128,
+              100,
+              150
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            100,
+            150
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 73792
+        },
+        {
+          "name": "restoration.decoders.1.fuse.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              100,
+              150
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            100,
+            150
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 36928
+        },
+        {
+          "name": "restoration.decoders.2.up",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              1,
+              64,
+              100,
+              150
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            200,
+            300
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 8224
+        },
+        {
+          "name": "restoration.decoders.2.skip_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              200,
+              300
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            200,
+            300
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 528
+        },
+        {
+          "name": "restoration.decoders.2.gate_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              200,
+              300
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            200,
+            300
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 528
+        },
+        {
+          "name": "restoration.decoders.2.score",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              200,
+              300
+            ]
+          ],
+          "output": [
+            1,
+            1,
+            200,
+            300
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 17
+        },
+        {
+          "name": "restoration.decoders.2.fuse.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              200,
+              300
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            200,
+            300
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 18464
+        },
+        {
+          "name": "restoration.decoders.2.fuse.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              200,
+              300
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            200,
+            300
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 9248
+        },
+        {
+          "name": "restoration.decoders.3.up",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              1,
+              32,
+              200,
+              300
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            400,
+            600
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2064
+        },
+        {
+          "name": "restoration.decoders.3.skip_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            8,
+            400,
+            600
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 136
+        },
+        {
+          "name": "restoration.decoders.3.gate_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            8,
+            400,
+            600
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 136
+        },
+        {
+          "name": "restoration.decoders.3.score",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              8,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            1,
+            400,
+            600
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 9
+        },
+        {
+          "name": "restoration.decoders.3.fuse.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            400,
+            600
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 4624
+        },
+        {
+          "name": "restoration.decoders.3.fuse.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            400,
+            600
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2320
+        },
+        {
+          "name": "restoration.head",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            3,
+            400,
+            600
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 51
+        },
+        {
+          "name": "adjustment.stem",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              1,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            400,
+            600
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 160
+        },
+        {
+          "name": "adjustment.encoder.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            400,
+            600
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2320
+        },
+        {
+          "name": "adjustment.encoder.1",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            400,
+            600
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2320
+        },
+        {
+          "name": "adjustment.encoder.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            400,
+            600
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2320
+        },
+        {
+          "name": "adjustment.decoder.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            400,
+            600
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 4624
+        },
+        {
+          "name": "adjustment.decoder.1",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            400,
+            600
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 4624
+        },
+        {
+          "name": "adjustment.coefficients",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              400,
+              600
+            ]
+          ],
+          "output": [
+            1,
+            8,
+            400,
+            600
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2312
+        }
+      ]
+    },
+    "train_patch_80x80": {
+      "input": [
+        8,
+        3,
+        80,
+        80
+      ],
+      "raw_output": [
+        8,
+        3,
+        80,
+        80
+      ],
+      "final_output": [
+        8,
+        3,
+        80,
+        80
+      ],
+      "layers": [
+        {
+          "name": "decomposition.first",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              3,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            32,
+            80,
+            80
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 896
+        },
+        {
+          "name": "decomposition.second",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              32,
+              40,
+              40
+            ]
+          ],
+          "output": [
+            8,
+            64,
+            40,
+            40
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 18496
+        },
+        {
+          "name": "decomposition.bottom",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              64,
+              20,
+              20
+            ]
+          ],
+          "output": [
+            8,
+            128,
+            20,
+            20
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 73856
+        },
+        {
+          "name": "decomposition.up_second",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              8,
+              128,
+              20,
+              20
+            ]
+          ],
+          "output": [
+            8,
+            64,
+            40,
+            40
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": false,
+          "parameters": 32768
+        },
+        {
+          "name": "decomposition.decode_second",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              128,
+              40,
+              40
+            ]
+          ],
+          "output": [
+            8,
+            64,
+            40,
+            40
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 73792
+        },
+        {
+          "name": "decomposition.up_first",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              8,
+              64,
+              40,
+              40
+            ]
+          ],
+          "output": [
+            8,
+            32,
+            80,
+            80
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": false,
+          "parameters": 8192
+        },
+        {
+          "name": "decomposition.decode_first",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              64,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            32,
+            80,
+            80
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 18464
+        },
+        {
+          "name": "decomposition.light_features",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              32,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            32,
+            80,
+            80
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 9248
+        },
+        {
+          "name": "decomposition.reflectance",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              32,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            3,
+            80,
+            80
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 99
+        },
+        {
+          "name": "decomposition.illumination",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              64,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            1,
+            80,
+            80
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 65
+        },
+        {
+          "name": "restoration.encoders.0.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              4,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            16,
+            80,
+            80
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 592
+        },
+        {
+          "name": "restoration.encoders.0.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              16,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            16,
+            80,
+            80
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2320
+        },
+        {
+          "name": "restoration.encoders.1.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              16,
+              40,
+              40
+            ]
+          ],
+          "output": [
+            8,
+            32,
+            40,
+            40
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 4640
+        },
+        {
+          "name": "restoration.encoders.1.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              32,
+              40,
+              40
+            ]
+          ],
+          "output": [
+            8,
+            32,
+            40,
+            40
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 9248
+        },
+        {
+          "name": "restoration.encoders.2.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              32,
+              20,
+              20
+            ]
+          ],
+          "output": [
+            8,
+            64,
+            20,
+            20
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 18496
+        },
+        {
+          "name": "restoration.encoders.2.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              64,
+              20,
+              20
+            ]
+          ],
+          "output": [
+            8,
+            64,
+            20,
+            20
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 36928
+        },
+        {
+          "name": "restoration.encoders.3.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              64,
+              10,
+              10
+            ]
+          ],
+          "output": [
+            8,
+            128,
+            10,
+            10
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 73856
+        },
+        {
+          "name": "restoration.encoders.3.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              128,
+              10,
+              10
+            ]
+          ],
+          "output": [
+            8,
+            128,
+            10,
+            10
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 147584
+        },
+        {
+          "name": "restoration.encoders.4.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              128,
+              5,
+              5
+            ]
+          ],
+          "output": [
+            8,
+            256,
+            5,
+            5
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 295168
+        },
+        {
+          "name": "restoration.encoders.4.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              256,
+              5,
+              5
+            ]
+          ],
+          "output": [
+            8,
+            256,
+            5,
+            5
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 590080
+        },
+        {
+          "name": "restoration.decoders.0.up",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              8,
+              256,
+              5,
+              5
+            ]
+          ],
+          "output": [
+            8,
+            128,
+            10,
+            10
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 131200
+        },
+        {
+          "name": "restoration.decoders.0.skip_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              128,
+              10,
+              10
+            ]
+          ],
+          "output": [
+            8,
+            64,
+            10,
+            10
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 8256
+        },
+        {
+          "name": "restoration.decoders.0.gate_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              128,
+              10,
+              10
+            ]
+          ],
+          "output": [
+            8,
+            64,
+            10,
+            10
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 8256
+        },
+        {
+          "name": "restoration.decoders.0.score",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              64,
+              10,
+              10
+            ]
+          ],
+          "output": [
+            8,
+            1,
+            10,
+            10
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 65
+        },
+        {
+          "name": "restoration.decoders.0.fuse.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              256,
+              10,
+              10
+            ]
+          ],
+          "output": [
+            8,
+            128,
+            10,
+            10
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 295040
+        },
+        {
+          "name": "restoration.decoders.0.fuse.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              128,
+              10,
+              10
+            ]
+          ],
+          "output": [
+            8,
+            128,
+            10,
+            10
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 147584
+        },
+        {
+          "name": "restoration.decoders.1.up",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              8,
+              128,
+              10,
+              10
+            ]
+          ],
+          "output": [
+            8,
+            64,
+            20,
+            20
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 32832
+        },
+        {
+          "name": "restoration.decoders.1.skip_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              64,
+              20,
+              20
+            ]
+          ],
+          "output": [
+            8,
+            32,
+            20,
+            20
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2080
+        },
+        {
+          "name": "restoration.decoders.1.gate_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              64,
+              20,
+              20
+            ]
+          ],
+          "output": [
+            8,
+            32,
+            20,
+            20
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2080
+        },
+        {
+          "name": "restoration.decoders.1.score",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              32,
+              20,
+              20
+            ]
+          ],
+          "output": [
+            8,
+            1,
+            20,
+            20
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 33
+        },
+        {
+          "name": "restoration.decoders.1.fuse.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              128,
+              20,
+              20
+            ]
+          ],
+          "output": [
+            8,
+            64,
+            20,
+            20
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 73792
+        },
+        {
+          "name": "restoration.decoders.1.fuse.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              64,
+              20,
+              20
+            ]
+          ],
+          "output": [
+            8,
+            64,
+            20,
+            20
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 36928
+        },
+        {
+          "name": "restoration.decoders.2.up",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              8,
+              64,
+              20,
+              20
+            ]
+          ],
+          "output": [
+            8,
+            32,
+            40,
+            40
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 8224
+        },
+        {
+          "name": "restoration.decoders.2.skip_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              32,
+              40,
+              40
+            ]
+          ],
+          "output": [
+            8,
+            16,
+            40,
+            40
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 528
+        },
+        {
+          "name": "restoration.decoders.2.gate_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              32,
+              40,
+              40
+            ]
+          ],
+          "output": [
+            8,
+            16,
+            40,
+            40
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 528
+        },
+        {
+          "name": "restoration.decoders.2.score",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              16,
+              40,
+              40
+            ]
+          ],
+          "output": [
+            8,
+            1,
+            40,
+            40
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 17
+        },
+        {
+          "name": "restoration.decoders.2.fuse.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              64,
+              40,
+              40
+            ]
+          ],
+          "output": [
+            8,
+            32,
+            40,
+            40
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 18464
+        },
+        {
+          "name": "restoration.decoders.2.fuse.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              32,
+              40,
+              40
+            ]
+          ],
+          "output": [
+            8,
+            32,
+            40,
+            40
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 9248
+        },
+        {
+          "name": "restoration.decoders.3.up",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              8,
+              32,
+              40,
+              40
+            ]
+          ],
+          "output": [
+            8,
+            16,
+            80,
+            80
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2064
+        },
+        {
+          "name": "restoration.decoders.3.skip_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              16,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            8,
+            80,
+            80
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 136
+        },
+        {
+          "name": "restoration.decoders.3.gate_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              16,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            8,
+            80,
+            80
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 136
+        },
+        {
+          "name": "restoration.decoders.3.score",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              8,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            1,
+            80,
+            80
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 9
+        },
+        {
+          "name": "restoration.decoders.3.fuse.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              32,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            16,
+            80,
+            80
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 4624
+        },
+        {
+          "name": "restoration.decoders.3.fuse.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              16,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            16,
+            80,
+            80
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2320
+        },
+        {
+          "name": "restoration.head",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              16,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            3,
+            80,
+            80
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 51
+        },
+        {
+          "name": "adjustment.stem",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              1,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            16,
+            80,
+            80
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 160
+        },
+        {
+          "name": "adjustment.encoder.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              16,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            16,
+            80,
+            80
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2320
+        },
+        {
+          "name": "adjustment.encoder.1",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              16,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            16,
+            80,
+            80
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2320
+        },
+        {
+          "name": "adjustment.encoder.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              16,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            16,
+            80,
+            80
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2320
+        },
+        {
+          "name": "adjustment.decoder.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              32,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            16,
+            80,
+            80
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 4624
+        },
+        {
+          "name": "adjustment.decoder.1",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              32,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            16,
+            80,
+            80
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 4624
+        },
+        {
+          "name": "adjustment.coefficients",
+          "type": "Conv2d",
+          "input": [
+            [
+              8,
+              32,
+              80,
+              80
+            ]
+          ],
+          "output": [
+            8,
+            8,
+            80,
+            80
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2312
+        }
+      ]
+    },
+    "odd_81x79": {
+      "input": [
+        1,
+        3,
+        81,
+        79
+      ],
+      "raw_output": [
+        1,
+        3,
+        81,
+        79
+      ],
+      "final_output": [
+        1,
+        3,
+        81,
+        79
+      ],
+      "layers": [
+        {
+          "name": "decomposition.first",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              3,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            81,
+            79
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 896
+        },
+        {
+          "name": "decomposition.second",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              41,
+              40
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            41,
+            40
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 18496
+        },
+        {
+          "name": "decomposition.bottom",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              21,
+              20
+            ]
+          ],
+          "output": [
+            1,
+            128,
+            21,
+            20
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 73856
+        },
+        {
+          "name": "decomposition.up_second",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              1,
+              128,
+              21,
+              20
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            42,
+            40
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": false,
+          "parameters": 32768
+        },
+        {
+          "name": "decomposition.decode_second",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              128,
+              41,
+              40
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            41,
+            40
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 73792
+        },
+        {
+          "name": "decomposition.up_first",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              1,
+              64,
+              41,
+              40
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            82,
+            80
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": false,
+          "parameters": 8192
+        },
+        {
+          "name": "decomposition.decode_first",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            81,
+            79
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 18464
+        },
+        {
+          "name": "decomposition.light_features",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            81,
+            79
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 9248
+        },
+        {
+          "name": "decomposition.reflectance",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            3,
+            81,
+            79
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 99
+        },
+        {
+          "name": "decomposition.illumination",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            1,
+            81,
+            79
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 65
+        },
+        {
+          "name": "restoration.encoders.0.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              4,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            81,
+            79
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 592
+        },
+        {
+          "name": "restoration.encoders.0.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            81,
+            79
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2320
+        },
+        {
+          "name": "restoration.encoders.1.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              41,
+              40
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            41,
+            40
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 4640
+        },
+        {
+          "name": "restoration.encoders.1.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              41,
+              40
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            41,
+            40
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 9248
+        },
+        {
+          "name": "restoration.encoders.2.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              21,
+              20
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            21,
+            20
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 18496
+        },
+        {
+          "name": "restoration.encoders.2.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              21,
+              20
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            21,
+            20
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 36928
+        },
+        {
+          "name": "restoration.encoders.3.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              11,
+              10
+            ]
+          ],
+          "output": [
+            1,
+            128,
+            11,
+            10
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 73856
+        },
+        {
+          "name": "restoration.encoders.3.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              128,
+              11,
+              10
+            ]
+          ],
+          "output": [
+            1,
+            128,
+            11,
+            10
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 147584
+        },
+        {
+          "name": "restoration.encoders.4.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              128,
+              6,
+              5
+            ]
+          ],
+          "output": [
+            1,
+            256,
+            6,
+            5
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 295168
+        },
+        {
+          "name": "restoration.encoders.4.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              256,
+              6,
+              5
+            ]
+          ],
+          "output": [
+            1,
+            256,
+            6,
+            5
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 590080
+        },
+        {
+          "name": "restoration.decoders.0.up",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              1,
+              256,
+              6,
+              5
+            ]
+          ],
+          "output": [
+            1,
+            128,
+            12,
+            10
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 131200
+        },
+        {
+          "name": "restoration.decoders.0.skip_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              128,
+              11,
+              10
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            11,
+            10
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 8256
+        },
+        {
+          "name": "restoration.decoders.0.gate_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              128,
+              11,
+              10
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            11,
+            10
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 8256
+        },
+        {
+          "name": "restoration.decoders.0.score",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              11,
+              10
+            ]
+          ],
+          "output": [
+            1,
+            1,
+            11,
+            10
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 65
+        },
+        {
+          "name": "restoration.decoders.0.fuse.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              256,
+              11,
+              10
+            ]
+          ],
+          "output": [
+            1,
+            128,
+            11,
+            10
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 295040
+        },
+        {
+          "name": "restoration.decoders.0.fuse.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              128,
+              11,
+              10
+            ]
+          ],
+          "output": [
+            1,
+            128,
+            11,
+            10
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 147584
+        },
+        {
+          "name": "restoration.decoders.1.up",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              1,
+              128,
+              11,
+              10
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            22,
+            20
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 32832
+        },
+        {
+          "name": "restoration.decoders.1.skip_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              21,
+              20
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            21,
+            20
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2080
+        },
+        {
+          "name": "restoration.decoders.1.gate_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              21,
+              20
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            21,
+            20
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2080
+        },
+        {
+          "name": "restoration.decoders.1.score",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              21,
+              20
+            ]
+          ],
+          "output": [
+            1,
+            1,
+            21,
+            20
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 33
+        },
+        {
+          "name": "restoration.decoders.1.fuse.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              128,
+              21,
+              20
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            21,
+            20
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 73792
+        },
+        {
+          "name": "restoration.decoders.1.fuse.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              21,
+              20
+            ]
+          ],
+          "output": [
+            1,
+            64,
+            21,
+            20
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 36928
+        },
+        {
+          "name": "restoration.decoders.2.up",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              1,
+              64,
+              21,
+              20
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            42,
+            40
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 8224
+        },
+        {
+          "name": "restoration.decoders.2.skip_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              41,
+              40
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            41,
+            40
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 528
+        },
+        {
+          "name": "restoration.decoders.2.gate_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              41,
+              40
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            41,
+            40
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 528
+        },
+        {
+          "name": "restoration.decoders.2.score",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              41,
+              40
+            ]
+          ],
+          "output": [
+            1,
+            1,
+            41,
+            40
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 17
+        },
+        {
+          "name": "restoration.decoders.2.fuse.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              64,
+              41,
+              40
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            41,
+            40
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 18464
+        },
+        {
+          "name": "restoration.decoders.2.fuse.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              41,
+              40
+            ]
+          ],
+          "output": [
+            1,
+            32,
+            41,
+            40
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 9248
+        },
+        {
+          "name": "restoration.decoders.3.up",
+          "type": "ConvTranspose2d",
+          "input": [
+            [
+              1,
+              32,
+              41,
+              40
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            82,
+            80
+          ],
+          "kernel": [
+            2,
+            2
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2064
+        },
+        {
+          "name": "restoration.decoders.3.skip_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            8,
+            81,
+            79
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 136
+        },
+        {
+          "name": "restoration.decoders.3.gate_projection",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            8,
+            81,
+            79
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 136
+        },
+        {
+          "name": "restoration.decoders.3.score",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              8,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            1,
+            81,
+            79
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 9
+        },
+        {
+          "name": "restoration.decoders.3.fuse.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            81,
+            79
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 4624
+        },
+        {
+          "name": "restoration.decoders.3.fuse.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            81,
+            79
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2320
+        },
+        {
+          "name": "restoration.head",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            3,
+            81,
+            79
+          ],
+          "kernel": [
+            1,
+            1
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            0,
+            0
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 51
+        },
+        {
+          "name": "adjustment.stem",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              1,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            81,
+            79
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 160
+        },
+        {
+          "name": "adjustment.encoder.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            81,
+            79
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2320
+        },
+        {
+          "name": "adjustment.encoder.1",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            81,
+            79
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2320
+        },
+        {
+          "name": "adjustment.encoder.2",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              16,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            81,
+            79
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2320
+        },
+        {
+          "name": "adjustment.decoder.0",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            81,
+            79
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 4624
+        },
+        {
+          "name": "adjustment.decoder.1",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            16,
+            81,
+            79
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 4624
+        },
+        {
+          "name": "adjustment.coefficients",
+          "type": "Conv2d",
+          "input": [
+            [
+              1,
+              32,
+              81,
+              79
+            ]
+          ],
+          "output": [
+            1,
+            8,
+            81,
+            79
+          ],
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "dilation": [
+            1,
+            1
+          ],
+          "groups": 1,
+          "bias": true,
+          "parameters": 2312
+        }
+      ]
+    }
+  },
+  "source_hashes": {
+    "checkpoints/model_current.pt": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+    "configs/model.json": "249b52f4144bc1ae89afd3f567e380eabb16360d0a35a262173aa99bf2a1135d",
+    "kind_enhance/cli.py": "4a86d8329f1a3157a5c02993bfcbeccfdec5486154c083bcf583f2dff3a85042",
+    "kind_enhance/__init__.py": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "kind_enhance/__main__.py": "102942c02cdbea1e98069b7486b9c6e21d2694d84d78fca0ff104d352566d68b",
+    "kind_enhance/application/enhancement.py": "4275ae69cb43f4587e24f7999b98b72ba7076d0e8a63b385d134d83a83286ad9",
+    "kind_enhance/application/__init__.py": "e548312c43d879d005e9f4b14b23833f31c6ce93afb11a762964c2d0fb5557b1",
+    "kind_enhance/data/paired_dataset.py": "d64054d83a2f29a5bcba717df3d6e44533024835aa157c66c20fa0f3416a6ecf",
+    "kind_enhance/data/__init__.py": "d0e3dd9ce4f2cfb36a739e9b8fd9795acb8419ee772211b048f8e6dfb1e55c54",
+    "kind_enhance/engineering/guard.py": "220384d1965eb0c0ef26b1b5a3d041ab66352e306e167e0256a94f5d11e36b7f",
+    "kind_enhance/engineering/objective.py": "0b1a15fc97a1824bb9cb9b16a4abb6145ee9873614214af654c65440cf916163",
+    "kind_enhance/engineering/policy.py": "c3d16af4c592f16aac61caa9fd29da8555e02ee727781c07e119ae575262f853",
+    "kind_enhance/engineering/runner.py": "768e6ff98e3ae9528152728df1a070c361848dcdf3d185c14f3cf890cfbad078",
+    "kind_enhance/engineering/__init__.py": "fbdd867420d9246f9211c696e4eda0b3fb8236a513324f04d0874fa0bf887994",
+    "kind_enhance/engineering/__main__.py": "116710c321651f30440cc5a3ff07e48abaf5510fda753af23626d47f798643a2",
+    "kind_enhance/evaluation/assessment.py": "321a2420724a80c2428435fd995f26fdf85a470552fa330d975dd42cffe8299a",
+    "kind_enhance/evaluation/competition.py": "6639284cabdddf2704752707820fcc327a6e01aede854ad71d776981e71f3444",
+    "kind_enhance/evaluation/detail.py": "6990957ab00441aa2dc5f9ca90e5bac6467a41bb7830c999ea16d70a0da8d3cc",
+    "kind_enhance/evaluation/experiments.py": "df04cfee78b1555730a52f5f76047b35e2c35faeee1cf12c302f361ff980bd73",
+    "kind_enhance/evaluation/ranking.py": "7df66b640be58685432bc763bdcdce114b59b78aa3c940adee80d3591bf4f6a1",
+    "kind_enhance/evaluation/reference.py": "1730114f4d6ebf4e2c70fa2d25eb35cd3bd8b3421ad206a7e5bf015bc71549bb",
+    "kind_enhance/evaluation/__init__.py": "a32ae9a08c6956bf0b8949750e89da4432f9416abb827350385587bb3a866e59",
+    "kind_enhance/inference/calibration.py": "9f50b112bf9ba04136f35ee0874d302242a29fcf9d643bee5c158455d0708c70",
+    "kind_enhance/inference/color_preservation.py": "b6d221766c8ff3d0e07790810eba0ed47ad409e37307415c0337fd5017823f36",
+    "kind_enhance/inference/luminance.py": "9f633f757870613c1e5279904a4ffd085444af484bb8089945aaa0cf7c955052",
+    "kind_enhance/inference/pipeline.py": "53b75e9bb3d70f06dfed534bdc5c69b61747547dcdf37a8941f4212d47e84435",
+    "kind_enhance/inference/__init__.py": "13976feb6021964971509264befd970fcf6963d6023777c58bb51817adef03cc",
+    "kind_enhance/infrastructure/artifacts.py": "6a78c2e6371d55aba89919e6e7e3707c5d5472d44da5072f48c3d1ad8c8d95ea",
+    "kind_enhance/infrastructure/images.py": "3b1245047a97b02b9de51f0e15bf496f6105cfd07d0875090a442056cc90553d",
+    "kind_enhance/infrastructure/runtime.py": "d1122d9041537c9f8789788c49b77e0135556203ca280b445880ced3d129f890",
+    "kind_enhance/infrastructure/__init__.py": "0c122333287bfceacb581ae62136fa4e1fcc51104a0f693e808faec816483fd1",
+    "kind_enhance/models/attention_unet.py": "faf0ff7e69d9a2b4f59d8df970a9b41e6a9fa01cf36bedd95b296bddf1b42527",
+    "kind_enhance/models/curve_cnn.py": "2a67022b9ed914a6e455af53dd2aabbe6ba891c4cce570870fadf28b13de0cab",
+    "kind_enhance/models/decomposition.py": "f08b4952876107fe760222eb982679f37e03bf19a04777b50669ee44bd0c54f5",
+    "kind_enhance/models/enhancement.py": "a9bf1723319f1c2f15ad5bbc4603e6c482f3007aefa799f2358071e49a7db3b7",
+    "kind_enhance/models/__init__.py": "6ab7c6be3fee41a657cb361b86440ad145c458771b5b2a91c6d7a8d6721e97d4",
+    "kind_enhance/research/color_policy.py": "09140ab9e5343480cea12f102058c2c80570a2ec94d6a3bd9705ba97710a6332",
+    "kind_enhance/research/color_preservation.py": "ad1558e8b9c61c97a27fde9f7168a857af32c2b41fd8fd31d71d8fcc0c59421e",
+    "kind_enhance/research/__init__.py": "4105b2df20970952a28f6511f3e3846b021b1e7c08b221cde2c89a9a2fa67187",
+    "kind_enhance/training/curriculum.py": "52b716d83709d2aec1c71daca6c625310f96472d27ce32c67f80a66b143bb134",
+    "kind_enhance/training/engine.py": "8fb1aa6cf95400b66701e918246286cd20c8de3172bf87577c3fed5a275a7371",
+    "kind_enhance/training/__init__.py": "0c54c506eba429aa801faacc0d64c853c9a042cfa81b3ad254df69a225e2b6d9",
+    "kind_enhance/training/losses/base.py": "9f650254844c2a9a80f043c7efa091498e37d37aa13b44df427831be130a81ec",
+    "kind_enhance/training/losses/clean_detail.py": "e38a76d230f1ee4ba7a910bc73cfee3cd6291ae8d8913ef981c62afb56bc672f",
+    "kind_enhance/training/losses/color.py": "441abdf34254066501ec6c871fbf311a52e39d7573be9b237be12bd2a500b664",
+    "kind_enhance/training/losses/color_fidelity.py": "53a176c75da8b0e0de916b8b1eb7b42ff19299943fc68c82459e7ed11a88545f",
+    "kind_enhance/training/losses/color_fidelity_strict.py": "05af1294f1ba18e226b77072924d4191615f041fdb73dc9f29f7e3ca6cda1403",
+    "kind_enhance/training/losses/contrast_gradient.py": "e48bcdcc1b8f63eef37df31280359638248a4fc553c32bb704dffc90c3de6c5c",
+    "kind_enhance/training/losses/four_metrics.py": "24e1db518c123528caae25bebdb09b6a2d266d3bb1009a74172c7cbf53e93360",
+    "kind_enhance/training/losses/gradient_alignment.py": "35b15f61a7a8a35281ebdff65bed978f9d4a56d782c0baf2adc63f7e485c6dc3",
+    "kind_enhance/training/losses/supported_edges.py": "8e9004913d5df532039e3f1bdb73cd174a94c164d8b651fff73b77220d42417e",
+    "kind_enhance/training/losses/__init__.py": "df2553aa665d39380a5817c52c9eebb82bbfd25eb9aa49787f9a190a2828b19b",
+    "kind_enhance/ui/desktop.py": "f3db2392d3f6a1e0de644fa61d7ad6a444495dee470041d635885c5a5014b883",
+    "kind_enhance/ui/__init__.py": "13c4df82db0b06503edf03feade77bff88387055e144551a6a1b25e1c6873f0c"
+  },
+  "synthetic_inputs_only": true,
+  "training_performed": false
+}

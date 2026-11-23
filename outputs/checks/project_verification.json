@@ -1,0 +1,19 @@
+{
+  "verified": true,
+  "app_version": "1.0.0",
+  "required_documents": 18,
+  "markdown_links_checked": 143,
+  "broken_links": 0,
+  "module_imports_checked": 45,
+  "source_layout_verified": true,
+  "moved_code_files": 44,
+  "checkpoint_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "network_parameters": 2217963,
+  "GUI_workflow_verified": true,
+  "approved_test_PNGs_identical": 100,
+  "original_dataset_manifest_unchanged": true,
+  "no_dependencies_downloaded": true,
+  "documentation_folder": "doc",
+  "entrypoint": "app.py",
+  "readme": "README.md"
+}

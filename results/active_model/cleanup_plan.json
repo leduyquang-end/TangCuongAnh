@@ -1,0 +1,92 @@
+{
+  "project_root": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh",
+  "user_authorized": true,
+  "retained_checkpoint_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "report": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\BAO_CAO_BAN_DA_CHOT_SO_VOI_AWF.md",
+  "protected": [
+    "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\LOL-v2",
+    "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\data",
+    "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\checkpoints\\model_current.pt",
+    "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\BAO_CAO_BAN_DA_CHOT_SO_VOI_AWF.md",
+    "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\test",
+    "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\selection.json",
+    "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\protocol.json",
+    "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\best_four_metrics.pt",
+    "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\kind_enhance",
+    "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\tools",
+    "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\tests",
+    "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\docs\\KIEN_TRUC_MO_HINH.md",
+    "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\docs\\C4_KIEN_TRUC_HE_THONG.md"
+  ],
+  "targets": [
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\clean_detail_refinement",
+      "directory": true,
+      "bytes": 255859673
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\context_clean_detail_refinement",
+      "directory": true,
+      "bytes": 169159323
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\clean_detail_calibration",
+      "directory": true,
+      "bytes": 89735478
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\clean_detail_smoke.json",
+      "directory": false,
+      "bytes": 470
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\Bao_cao_day_du_KinD_Attention_UNet_Curve_CNN.docx",
+      "directory": false,
+      "bytes": 1441460
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\BAO_CAO_TINH_CHINH_CHI_TIET_GIAM_NHIEU.md",
+      "directory": false,
+      "bytes": 9725
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\clean_detail_calibration.log",
+      "directory": false,
+      "bytes": 5990
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\clean_detail_summary.json",
+      "directory": false,
+      "bytes": 4651
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\clean_detail_test.log",
+      "directory": false,
+      "bytes": 1804
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\clean_detail_training.log",
+      "directory": false,
+      "bytes": 22093
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\context_detail_training.log",
+      "directory": false,
+      "bytes": 14316
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\BAO_CAO_BON_CHI_SO.md",
+      "directory": false,
+      "bytes": 11551
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\docs\\TINH_CHINH_CHI_TIET_GIAM_NHIEU.md",
+      "directory": false,
+      "bytes": 10276
+    }
+  ],
+  "total_bytes": 516276810,
+  "previous_config_sha256": "6ce1c8a7977d078b1cdf8f94a1a7f805231ea954c25f6660dfea5af5a69adff2",
+  "current_config_sha256": "249b52f4144bc1ae89afd3f567e380eabb16360d0a35a262173aa99bf2a1135d",
+  "inference_parameters_changed": false
+}

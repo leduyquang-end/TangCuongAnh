@@ -1,0 +1,19 @@
+{
+  "verified": true,
+  "model_checkpoint_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "active_report": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\BAO_CAO_BAN_DA_CHOT_SO_VOI_AWF.md",
+  "report_AWF_Z": 1.4479,
+  "latest_removed_count": 13,
+  "latest_removed_MiB": 492.3599338531494,
+  "unit_tests_passed": 56,
+  "CLI_PNG_matches_approved": true,
+  "all_current_document_links_valid": true,
+  "split_counts": {
+    "train": 620,
+    "val": 69,
+    "test": 100
+  },
+  "current_test_RGB_images": 100,
+  "source_code_preserved": true,
+  "architecture_documents_preserved": true
+}

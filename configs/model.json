@@ -1,0 +1,28 @@
+{
+  "model": "checkpoints/model_current.pt",
+  "model_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "reference": "checkpoints/model_current.pt",
+  "reference_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "manifest": "data/split-local.json",
+  "manifest_sha256": "b8f81a92034442604ee8527e32d672638026ab4b556ce450d7ac4bac4534ca2f",
+  "calibration": {
+    "mode": "linear",
+    "contrast": 1.08,
+    "detail": 0.25,
+    "sharpen": 1.4
+  },
+  "user_approved_as_final": true,
+  "selection_reason": "User explicitly approved this checkpoint and requested removal of older versions.",
+  "architecture": "KinD Decomposition + Attention U-Net + Curve CNN",
+  "training_provenance": "experiments/ag_refinement/run_four_metric_curriculum/selection.json",
+  "evaluation_report": "reports/BAO_CAO_BAN_DA_CHOT_SO_VOI_AWF.md",
+  "rgb_preservation": {
+    "blend": 1.0,
+    "gain": 0.5
+  },
+  "luminance_refinement": {
+    "contrast": 1.02,
+    "lift": 0.007
+  },
+  "approval_date": "2026-11-13"
+}

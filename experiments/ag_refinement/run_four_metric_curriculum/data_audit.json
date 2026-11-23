@@ -1,0 +1,13 @@
+{
+  "allowed_splits": [
+    "train",
+    "val"
+  ],
+  "unique_images_opened": {
+    "train": 1240,
+    "val": 138
+  },
+  "blocked_attempts": [],
+  "test_images_allowed": false,
+  "status": "complete"
+}

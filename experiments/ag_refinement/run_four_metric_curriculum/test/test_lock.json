@@ -1,0 +1,9 @@
+{
+  "selection_sha256": "72dd9b6251bbf9e0ae5df0391a704dcfbbff6392b8c22c551b2ea5dbdb3f260b",
+  "checkpoint_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "protocol_sha256": "3fb9cff48ee49a8d0aabd38930e5e5017257944fed5b8a1eb92670ffa23058af",
+  "evaluated_checkpoint_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "metrics_source_sha256": "6639284cabdddf2704752707820fcc327a6e01aede854ad71d776981e71f3444",
+  "evaluator_source_sha256": "fd2004dfee04310ad8cbd36c87a87089b8f76ecb9156c941e71c4a2ce8310d39",
+  "test_feedback_allowed": false
+}

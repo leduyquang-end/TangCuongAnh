@@ -1,0 +1,13 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.ps1 text eol=crlf
+/LOL-v2/** filter=lfs diff=lfs merge=lfs -text
+*.pt filter=lfs diff=lfs merge=lfs -text
+# Hash-locked files and historical evidence must retain exact bytes.
+/data/** -text
+/configs/** -text
+/experiments/** -text
+/results/** -text

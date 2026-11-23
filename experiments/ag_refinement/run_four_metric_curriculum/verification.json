@@ -1,0 +1,45 @@
+{
+  "verified": true,
+  "splits": {
+    "val": {
+      "images": 69,
+      "RGB_size": [
+        600,
+        400
+      ],
+      "unique_IDs": 69,
+      "stage_images": 36,
+      "PNG_metrics_match_CSV": true,
+      "aggregate_matches_metrics": true,
+      "locks_match": true,
+      "primary_failures": []
+    },
+    "test": {
+      "images": 100,
+      "RGB_size": [
+        600,
+        400
+      ],
+      "unique_IDs": 100,
+      "stage_images": 36,
+      "PNG_metrics_match_CSV": true,
+      "aggregate_matches_metrics": true,
+      "locks_match": true,
+      "primary_failures": []
+    }
+  },
+  "checkpoint_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "architecture": "KinD Decomposition + Attention U-Net + Curve CNN",
+  "total_parameters": 2217963,
+  "trainable_parameters_this_round": 1982087,
+  "dataset_splits_disjoint": true,
+  "default_config_unchanged": true,
+  "default_checkpoint_unchanged": true,
+  "original_dataset_access_during_verification": {
+    "allowed_splits": [],
+    "unique_images_opened": {},
+    "blocked_attempts": [],
+    "test_images_allowed": false
+  },
+  "no_further_tuning_after_test": true
+}

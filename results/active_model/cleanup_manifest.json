@@ -1,0 +1,337 @@
+{
+  "project_root": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh",
+  "user_authorized": true,
+  "approval_date": "2026-11-13",
+  "removed_targets": [
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\color_refinement",
+      "directory": true,
+      "bytes": 338381072
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\engineering_loop",
+      "directory": true,
+      "bytes": 117107244
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\aligned_smoke.json",
+      "directory": false,
+      "bytes": 1139
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\exam-3.png",
+      "directory": false,
+      "bytes": 128026
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\exam-4.png",
+      "directory": false,
+      "bytes": 211099
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\four_metrics_smoke.json",
+      "directory": false,
+      "bytes": 435
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\gt_train_val_audit.json",
+      "directory": false,
+      "bytes": 761
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_aligned_edges",
+      "directory": true,
+      "bytes": 42679168
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_restoration_edges",
+      "directory": true,
+      "bytes": 109920853
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\highest_AG.pt",
+      "directory": false,
+      "bytes": 8909751
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\ag_005\\best.pt",
+      "directory": false,
+      "bytes": 8905135
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\ag_005\\epoch_01.pt",
+      "directory": false,
+      "bytes": 8909535
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\ag_005\\epoch_02.pt",
+      "directory": false,
+      "bytes": 8909535
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\ag_005\\epoch_03.pt",
+      "directory": false,
+      "bytes": 8909535
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\ag_005\\last.pt",
+      "directory": false,
+      "bytes": 24820163
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\ag_010\\best.pt",
+      "directory": false,
+      "bytes": 8905135
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\ag_010\\epoch_01.pt",
+      "directory": false,
+      "bytes": 8909535
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\ag_010\\epoch_02.pt",
+      "directory": false,
+      "bytes": 8909535
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\ag_010\\epoch_03.pt",
+      "directory": false,
+      "bytes": 8909535
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\ag_010\\last.pt",
+      "directory": false,
+      "bytes": 24820163
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\checkpoints\\model_final.pt",
+      "directory": false,
+      "bytes": 8905711
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\checkpoints\\model_optimized.pt",
+      "directory": false,
+      "bytes": 8904623
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\checkpoints\\training_reference.pt",
+      "directory": false,
+      "bytes": 8906287
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\results\\check_reproduction",
+      "directory": true,
+      "bytes": 15600
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\results\\cleanup_manifest.json",
+      "directory": false,
+      "bytes": 1047
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\results\\final_verification.json",
+      "directory": false,
+      "bytes": 2891
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\results\\post_cleanup_smoke.png",
+      "directory": false,
+      "bytes": 336615
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\results\\stages_example",
+      "directory": true,
+      "bytes": 1963472
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\results\\test",
+      "directory": true,
+      "bytes": 39180512
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\results\\validation",
+      "directory": true,
+      "bytes": 4515534
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\results\\active_model\\previous_KIEN_TRUC_MO_HINH_brief.md",
+      "directory": false,
+      "bytes": 5232
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\results\\active_model\\previous_KIEN_TRUC_VA_LOSS.md",
+      "directory": false,
+      "bytes": 2097
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\results\\active_model\\previous_model_config.json",
+      "directory": false,
+      "bytes": 774
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\results\\active_model\\previous_README.md",
+      "directory": false,
+      "bytes": 4822
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\results\\active_model\\promotion_sample.png",
+      "directory": false,
+      "bytes": 374106
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\ag_ci_refinement",
+      "directory": true,
+      "bytes": 36558739
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\build",
+      "directory": true,
+      "bytes": 5779827
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\color_audit_20261113",
+      "directory": true,
+      "bytes": 2294696
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\tools\\diagnose_output_color.py",
+      "directory": false,
+      "bytes": 4817
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\tools\\refine_ag_branch.py",
+      "directory": false,
+      "bytes": 11232
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\tools\\refine_aligned_edges.py",
+      "directory": false,
+      "bytes": 9553
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\tools\\refine_output_color.py",
+      "directory": false,
+      "bytes": 11710
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\tools\\refine_output_color_v2.py",
+      "directory": false,
+      "bytes": 12127
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\tools\\refine_output_color_v3.py",
+      "directory": false,
+      "bytes": 12322
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\tools\\report_ag_refinement.py",
+      "directory": false,
+      "bytes": 17301
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\tools\\select_all_gain.py",
+      "directory": false,
+      "bytes": 11270
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\tools\\select_all_gain_v2.py",
+      "directory": false,
+      "bytes": 11276
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\tools\\select_color_mli_floor.py",
+      "directory": false,
+      "bytes": 2466
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\tools\\select_color_strict.py",
+      "directory": false,
+      "bytes": 10486
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\tools\\select_rgb_preservation.py",
+      "directory": false,
+      "bytes": 8095
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\tools\\select_rgb_preservation_v2.py",
+      "directory": false,
+      "bytes": 8216
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\clean_detail_refinement",
+      "directory": true,
+      "bytes": 255859673
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\context_clean_detail_refinement",
+      "directory": true,
+      "bytes": 169159323
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\clean_detail_calibration",
+      "directory": true,
+      "bytes": 89735478
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\clean_detail_smoke.json",
+      "directory": false,
+      "bytes": 470
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\Bao_cao_day_du_KinD_Attention_UNet_Curve_CNN.docx",
+      "directory": false,
+      "bytes": 1441460
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\BAO_CAO_TINH_CHINH_CHI_TIET_GIAM_NHIEU.md",
+      "directory": false,
+      "bytes": 9725
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\clean_detail_calibration.log",
+      "directory": false,
+      "bytes": 5990
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\clean_detail_summary.json",
+      "directory": false,
+      "bytes": 4651
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\clean_detail_test.log",
+      "directory": false,
+      "bytes": 1804
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\clean_detail_training.log",
+      "directory": false,
+      "bytes": 22093
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\reports\\context_detail_training.log",
+      "directory": false,
+      "bytes": 14316
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\BAO_CAO_BON_CHI_SO.md",
+      "directory": false,
+      "bytes": 11551
+    },
+    {
+      "path": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\docs\\TINH_CHINH_CHI_TIET_GIAM_NHIEU.md",
+      "directory": false,
+      "bytes": 10276
+    }
+  ],
+  "removed_target_count": 64,
+  "removed_bytes": 1372407620,
+  "latest_removed_count": 13,
+  "latest_removed_bytes": 516276810,
+  "retained_checkpoint": "checkpoints/model_current.pt",
+  "retained_checkpoint_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "retained_report": "reports/BAO_CAO_BAN_DA_CHOT_SO_VOI_AWF.md",
+  "dataset_deleted": false,
+  "source_code_deleted": false,
+  "architecture_documents_retained": true
+}

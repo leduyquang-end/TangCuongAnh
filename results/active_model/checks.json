@@ -1,0 +1,28 @@
+{
+  "unit_test_command": "python -B -m unittest discover -s tests",
+  "unit_tests_passed": 64,
+  "pipeline_reproduction_images": 100,
+  "CLI_identical": true,
+  "post_cleanup_artifacts_verified": true,
+  "active_config_sha256": "249b52f4144bc1ae89afd3f567e380eabb16360d0a35a262173aa99bf2a1135d",
+  "checkpoint_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "retained_train_validation_test_counts": [
+    620,
+    69,
+    100
+  ],
+  "old_versions_removed": true,
+  "architecture_unchanged": true,
+  "latest_report": "reports/BAO_CAO_BAN_DA_CHOT_SO_VOI_AWF.md",
+  "post_cleanup_CLI_PNG_identical": true,
+  "all_current_document_links_valid": true,
+  "old_experimental_artifacts_removed": true,
+  "latest_cleanup_removed_targets": 13,
+  "application_version": "1.0.0",
+  "GUI_workflow_verified": true,
+  "application_release": "results/active_model/application_release.json",
+  "source_layout_verified": true,
+  "code_reorganization": "outputs/checks/code_reorganization.json",
+  "source_modules_moved": 26,
+  "test_files_grouped": 18
+}

@@ -1,0 +1,21 @@
+{
+  "loss": 2.8004374504089355,
+  "finite_gradient_branches": [
+    "restoration",
+    "adjustment"
+  ],
+  "frozen_decomposition": true,
+  "primary_gates_checked": true,
+  "parameter_count": 2217963,
+  "trainable_count": 1982087,
+  "data_audit": {
+    "allowed_splits": [
+      "train"
+    ],
+    "unique_images_opened": {
+      "train": 2
+    },
+    "blocked_attempts": [],
+    "test_images_allowed": false
+  }
+}

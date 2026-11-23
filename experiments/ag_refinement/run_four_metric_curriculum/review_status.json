@@ -1,0 +1,14 @@
+{
+  "CI_target_met": true,
+  "AG_target_met": false,
+  "all_four_test_means_increased": true,
+  "quality_regression_detected": true,
+  "recommended_for_promotion": false,
+  "default_model_changed": false,
+  "reason": "AG remains 0.05127 instead of near 0.1; PSNR/SSIM and GT edge agreement fall while flat-region gradients rise",
+  "checkpoint_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "user_approved": true,
+  "promoted_to_default": true,
+  "approval_date": "2026-11-13",
+  "technical_quality_recommendation_at_evaluation": false
+}

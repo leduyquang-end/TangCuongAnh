@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="local-token" content="__LOCAL_TOKEN__">
+<title>KinD · Tăng sáng ảnh</title>
+<link rel="stylesheet" href="/app.css"><script src="/app.js" defer></script>
+</head>
+<body>
+<header><div class="brand"><span class="sun" aria-hidden="true">☀</span> KinD <span class="brand-sub">IMAGE ENHANCEMENT</span></div><span class="local"><i></i> Chạy trên máy của bạn</span></header>
+<main>
+<div class="intro"><p class="eyebrow">KIN​D + ATTENTION U-NET + CURVE CNN</p><h1>Tăng sáng ảnh của bạn</h1><p>Chọn ảnh tối, chạy mô hình và xem kết quả ngay bên dưới.</p></div>
+<section class="controls" aria-label="Chọn ảnh và xử lý">
+<div class="buttons"><button id="chooseFiles" class="outline">＋ Chọn ảnh</button><button id="chooseFolder" class="outline">▱ Chọn thư mục</button><button id="run" class="primary" disabled>Tăng sáng <span aria-hidden="true">↗</span></button></div>
+<input id="files" type="file" accept="image/png,image/jpeg,image/webp,image/bmp,image/tiff" multiple hidden>
+<input id="folder" type="file" webkitdirectory directory multiple hidden>
+<div class="selection"><label id="listLabel" for="fileList" hidden>Ảnh đang xem</label><select id="fileList" hidden></select><span id="selectionInfo">Bạn có thể chọn một ảnh hoặc cả thư mục.</span></div>
+</section>
+<div class="status-row"><span id="status" role="status" aria-live="polite">Sẵn sàng. Hãy chọn ảnh để bắt đầu.</span><span id="busy" class="spinner" hidden aria-label="Đang xử lý"></span></div>
+<section class="comparison" aria-label="Ảnh trước và sau xử lý">
+<article class="panel"><div class="panel-head"><h2>Ảnh đầu vào</h2><span class="tag">TRƯỚC</span></div><div class="canvas" id="inputCanvas"><div class="empty" id="inputEmpty"><span class="picture-icon">▧</span><strong>Ảnh tối của bạn</strong><span>PNG, JPG, WebP, BMP hoặc TIFF · tối đa 20 MB/ảnh</span></div><img id="before" hidden alt="Ảnh tối đầu vào"></div><div class="panel-foot" id="inputName">Chưa chọn ảnh</div></article>
+<article class="panel"><div class="panel-head"><h2>Kết quả tăng sáng</h2><span class="tag blue">SAU</span></div><div class="canvas" id="outputCanvas"><div class="empty" id="outputEmpty"><span class="picture-icon">☀</span><strong>Ảnh sáng sẽ hiện tại đây</strong><span>Nhấn Tăng sáng sau khi chọn ảnh.</span></div><img id="after" hidden alt="Ảnh đã được mô hình tăng sáng"></div><div class="panel-foot result-foot"><span id="resultInfo">Chờ xử lý</span><a id="download" hidden>Tải PNG ↓</a></div></article>
+</section>
+<p class="note">Ảnh kết quả tự lưu trong <code>outputs/images</code>. Ảnh lớn được giữ tỷ lệ với cạnh dài tối đa 1280 px.</p>
+</main>
+<footer>KinD · Mô hình đã huấn luyện <span>Xử lý cục bộ trên máy</span></footer>
+</body></html>

@@ -1,0 +1,34 @@
+# Local Python environments and build/cache files
+/.venv/
+/.runtime311/
+/.cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+/dist/
+/build/
+/runs/
+*.part
+.DS_Store
+Thumbs.db
+# The expanded dataset is included; avoid uploading a second ZIP copy.
+/*.zip
+# Local credentials/configuration
+.env
+.env.*
+!.env.example
+/configs/*.local.json
+# Keep reproducible evaluation evidence, not user uploads or browser profiles.
+/outputs/*
+!/outputs/README.md
+!/outputs/test_100/
+!/outputs/checks/
+!/outputs/logs/
+/outputs/checks/*
+!/outputs/checks/code_reorganization.json
+!/outputs/checks/project_cleanup.json
+!/outputs/checks/project_verification.json
+!/outputs/checks/local_web_smoke.json
+!/outputs/checks/metric_audit_20261123/
+/outputs/logs/*
+!/outputs/logs/approved_model_reproduction.log

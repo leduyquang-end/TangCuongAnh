@@ -1,0 +1,143 @@
+{
+  "date": "2026-11-23",
+  "entrypoint": "app.py",
+  "changed_files": [
+    "app.py",
+    "kind_enhance/application/enhancement.py",
+    "tools/verification/smoke_local_web.py",
+    "tools/verification/check_project.py",
+    "README.md",
+    "doc/1_tong_quan/1.2_huong_dan_su_dung.md",
+    "doc/1_tong_quan/1.1_cau_truc_du_an.md",
+    "kind_enhance/README.md",
+    "tools/README.md",
+    "doc/2_cac_ky_thuat/2.1_architecture.md",
+    "doc/2_cac_ky_thuat/2.2_business_flow.md",
+    "doc/2_cac_ky_thuat/2.3_mo_hinh_c4.md",
+    "doc/1_tong_quan/1.5_quy_trinh_lam_du_an.md",
+    "doc/3_san_pham/3.1_changelog.md",
+    "outputs/README.md"
+  ],
+  "removed_files": [
+    {
+      "path": "LOCALHOST.cmd",
+      "sha256": "fbc245c86c836d2c9e48fb429a5fbc8706bd1457e1157e199bd82eda39d859bc",
+      "reason": "Redundant application launcher; use app.py",
+      "kept": "app.py"
+    },
+    {
+      "path": "CHAY_LOCAL.cmd",
+      "sha256": "0351d1785001c8ddcfa54c844b1f5c8fb8622148a6f067833221fc702cff4533",
+      "reason": "Redundant application launcher; use app.py",
+      "kept": "app.py"
+    },
+    {
+      "path": "start_app.cmd",
+      "sha256": "06751e1d2279a4153425f300d128f75052c3ae89539f761fc55107a0686197a5",
+      "reason": "Redundant application launcher; use app.py",
+      "kept": "app.py"
+    },
+    {
+      "path": "scripts/start_app.ps1",
+      "sha256": "43f2820bef26baad9b71aa309df3f53bece18bdf890c954b61aa0a802186810b",
+      "reason": "Redundant application launcher; use app.py",
+      "kept": "app.py"
+    },
+    {
+      "path": "results/active_model/pipeline_check.log",
+      "sha256": "ff7df985a4d158d730b07f315f3ae563f091ebdce2f4dd43b6d66bd40e421e70",
+      "reason": "Byte-identical duplicate log",
+      "kept": "outputs/logs/approved_model_reproduction.log"
+    },
+    {
+      "path": "results/active_model/post_cleanup_check.log",
+      "sha256": "adba439b5e2e88abb89bcd4c5d554d404246a8aa2f2b20d0d262819896e164c0",
+      "reason": "Byte-identical duplicate log",
+      "kept": "results/active_model/artifact_check.log"
+    },
+    {
+      "path": "outputs/runs/cli_output_ff50e94f.json",
+      "sha256": "40b6e81735c4d37c3bfa05e8ed3ee245dd2a3ae4f467c80b3cf58b094861c08c",
+      "reason": "Superseded metadata for same output path; kept latest record",
+      "kept": "outputs/runs/cli_output_5f1142e93497.json"
+    }
+  ],
+  "renamed_metadata": [
+    {
+      "old": "outputs/runs/anh_1_45d587ff_81ba300e.json",
+      "new": "outputs/runs/anh_1_45d587ff_0eda01ac9845.json"
+    },
+    {
+      "old": "outputs/runs/anh_2_2048bf8d_84fabb7a.json",
+      "new": "outputs/runs/anh_2_2048bf8d_ce30e915de91.json"
+    },
+    {
+      "old": "outputs/runs/anh_toi_6bf48ad6_8d550a7e.json",
+      "new": "outputs/runs/anh_toi_6bf48ad6_960636cdc969.json"
+    },
+    {
+      "old": "outputs/runs/anh_toi_enhanced_4c18dc04_312a9c6c.json",
+      "new": "outputs/runs/anh_toi_enhanced_4c18dc04_6bde66897e1e.json"
+    },
+    {
+      "old": "outputs/runs/anh_toi_enhanced_8b4611cc_6cdfed34.json",
+      "new": "outputs/runs/anh_toi_enhanced_8b4611cc_ed5062509a0b.json"
+    },
+    {
+      "old": "outputs/runs/anh_toi_enhanced_b996ef16_64a2accd.json",
+      "new": "outputs/runs/anh_toi_enhanced_b996ef16_b1b7d8305c80.json"
+    },
+    {
+      "old": "outputs/runs/anh_toi_enhanced_e7259074_76c961fb.json",
+      "new": "outputs/runs/anh_toi_enhanced_e7259074_24095d89d680.json"
+    },
+    {
+      "old": "outputs/runs/cli_output_4079083b.json",
+      "new": "outputs/runs/cli_output_5f1142e93497.json"
+    },
+    {
+      "old": "outputs/runs/googles-night-sight-camera-is-downright-amazingw1456-15403638368961525_3cba19fa_fe4c9376.json",
+      "new": "outputs/runs/googles-night-sight-camera-is-downright-amazingw1456-15403638368961525_3cba19fa_9e7a707832ef.json"
+    },
+    {
+      "old": "outputs/runs/low00690_dd9434d0_586256fe.json",
+      "new": "outputs/runs/low00690_dd9434d0_5fa9eadcf378.json"
+    },
+    {
+      "old": "outputs/runs/low00691_4fe3afd5_2cdc7010.json",
+      "new": "outputs/runs/low00691_4fe3afd5_80ac629ab4c1.json"
+    },
+    {
+      "old": "outputs/runs/low00691_be52d901_9538845d.json",
+      "new": "outputs/runs/low00691_be52d901_3b2bcb88e968.json"
+    },
+    {
+      "old": "outputs/runs/low00732_34096082_6b069c03.json",
+      "new": "outputs/runs/low00732_34096082_2f6f706482d3.json"
+    },
+    {
+      "old": "outputs/runs/low00747_aa091197_7ffdf44e.json",
+      "new": "outputs/runs/low00747_aa091197_1d6d724ce848.json"
+    }
+  ],
+  "checkpoint_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "training_performed": false,
+  "model_config_changed": false,
+  "dataset_changed": false,
+  "test_gallery_images": 100,
+  "additional_updated_files": [
+    ".gitignore",
+    ".gitattributes",
+    "README.md",
+    "kind_enhance/inference/pipeline.py",
+    "tools/evaluation/export_test_gallery.py",
+    "tests/application/test_dataset_location.py",
+    "reports/BAO_CAO_BAN_DA_CHOT_SO_VOI_AWF.md"
+  ],
+  "verification": {
+    "related_tests_passed": 11,
+    "real_app_HTTP_smoke_passed": true,
+    "project_check_passed": true,
+    "markdown_links_broken": 0
+  }
+}

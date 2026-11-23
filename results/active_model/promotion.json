@@ -1,0 +1,77 @@
+{
+  "active_checkpoint": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\checkpoints\\model_current.pt",
+  "sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "user_approved": true,
+  "approval_date": "2026-11-13",
+  "source_selection": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\selection.json",
+  "source_selection_sha256": "72dd9b6251bbf9e0ae5df0391a704dcfbbff6392b8c22c551b2ea5dbdb3f260b",
+  "active_config_sha256": "249b52f4144bc1ae89afd3f567e380eabb16360d0a35a262173aa99bf2a1135d",
+  "previous_configuration": {
+    "model": "checkpoints/model_optimized.pt",
+    "model_sha256": "3796b93123aee3991fc364b1e9196fcf59090e55745f282418b07285a19d38d2",
+    "reference": "checkpoints/training_reference.pt",
+    "reference_sha256": "9fe9c603d3b53a31eb66ab38528f8744378b7d0c5ed313637078ce301add82ab",
+    "manifest": "data/split-local.json",
+    "manifest_sha256": "b8f81a92034442604ee8527e32d672638026ab4b556ce450d7ac4bac4534ca2f",
+    "calibration": {
+      "mode": "linear",
+      "contrast": 1.08,
+      "detail": 0.25,
+      "sharpen": 1.5
+    },
+    "user_approved_as_final": true,
+    "selection_reason": "User approved retaining the best engineering-loop checkpoint; selected on validation (run_v2 trial 2).",
+    "architecture": "KinD Decomposition + Attention U-Net + Curve CNN",
+    "training_provenance": "experiments/engineering_loop/run_v2/selection.json",
+    "evaluation_report": "experiments/engineering_loop/run_v2/test/BAO_CAO_TEST_100.md"
+  },
+  "pipeline": {
+    "calibration": {
+      "mode": "linear",
+      "contrast": 1.08,
+      "detail": 0.25,
+      "sharpen": 1.4
+    },
+    "rgb_preservation": {
+      "blend": 1.0,
+      "gain": 0.5
+    },
+    "luminance_refinement": {
+      "contrast": 1.02,
+      "lift": 0.007
+    }
+  },
+  "test_metrics": {
+    "MLI": 0.48632755864084964,
+    "CI": 0.22716896271851372,
+    "E": 7.6442041176150735,
+    "AG": 0.051272188651890524,
+    "PSNR": 13.92511534552785,
+    "SSIM": 0.5134490171074867,
+    "clipped_fraction": 0.025759333333333332,
+    "z_fixed_pdf": 2.3558859812403528,
+    "awf_margin_six": 0.3259720341837703,
+    "pairs": 100,
+    "chroma_mae": 0.022784304283559324,
+    "chromaticity_mae": 0.029280354846268893,
+    "saturation": 0.14119296003133058,
+    "gt_saturation": 0.2262878030538559,
+    "saturation_mae": 0.11360364604741335,
+    "flat_ag": 0.026423399038612842,
+    "gradient_cosine": 0.39123822525143626,
+    "supported_gradient_mae": 0.05215191904455423,
+    "GT_flat_fraction": 0.1607423806702718,
+    "flat_AG_contribution": 0.0035922298129298725,
+    "nonflat_AG_contribution": 0.04756150322034955
+  },
+  "architecture_unchanged": true,
+  "quality_tradeoffs_previously_reported": true,
+  "no_retraining_or_test_tuning": true,
+  "cleanup_manifest": "results/active_model/cleanup_manifest.json",
+  "post_cleanup_tests_passed": 50,
+  "pipeline_test_PNGs_identical": 100,
+  "CLI_PNG_identical": true,
+  "post_cleanup_artifacts_verified": true,
+  "evaluation_report": "reports/BAO_CAO_BAN_DA_CHOT_SO_VOI_AWF.md",
+  "report_metadata_updated_only": true
+}

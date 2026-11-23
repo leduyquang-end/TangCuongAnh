@@ -1,0 +1,170 @@
+{
+  "checkpoint": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\best_four_metrics.pt",
+  "sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "baseline": {
+    "MLI": 0.4548886640589182,
+    "CI": 0.2363532127685243,
+    "E": 7.589583934062625,
+    "AG": 0.025942385604483097,
+    "PSNR": 15.408949648960093,
+    "SSIM": 0.648311291915783,
+    "clipped_fraction": 0.008352898550724637,
+    "z_fixed_pdf": 2.0008445023971007,
+    "awf_margin_six": 0.13307484585195073,
+    "pairs": 69,
+    "chroma_mae": 0.03255996508928745,
+    "chromaticity_mae": 0.03731343621873985,
+    "saturation": 0.1680693326220996,
+    "gt_saturation": 0.2977312960918399,
+    "saturation_mae": 0.16196621060911295,
+    "flat_ag": 0.012162533730430447
+  },
+  "validation": {
+    "MLI": 0.46748115817467084,
+    "CI": 0.24977666218068365,
+    "E": 7.6481202982954795,
+    "AG": 0.04425984041191065,
+    "PSNR": 14.735455907128062,
+    "SSIM": 0.4879162901121637,
+    "clipped_fraction": 0.02187584541062802,
+    "z_fixed_pdf": 2.327632834154199,
+    "awf_margin_six": 0.33676227264102643,
+    "pairs": 69,
+    "chroma_mae": 0.03308840626445801,
+    "chromaticity_mae": 0.039661259613121336,
+    "saturation": 0.1645972083012263,
+    "gt_saturation": 0.2977312960918399,
+    "saturation_mae": 0.1649464776172586,
+    "flat_ag": 0.027468810262887375
+  },
+  "best_primary_event": {
+    "plan": "ag_010",
+    "epoch": 3,
+    "metrics": {
+      "MLI": 0.46748115817467084,
+      "CI": 0.24977666218068365,
+      "E": 7.6481202982954795,
+      "AG": 0.04425984041191065,
+      "PSNR": 14.735455907128062,
+      "SSIM": 0.4879162901121637,
+      "clipped_fraction": 0.02187584541062802,
+      "z_fixed_pdf": 2.327632834154199,
+      "awf_margin_six": 0.33676227264102643,
+      "pairs": 69,
+      "chroma_mae": 0.03308840626445801,
+      "chromaticity_mae": 0.039661259613121336,
+      "saturation": 0.1645972083012263,
+      "gt_saturation": 0.2977312960918399,
+      "saturation_mae": 0.1649464776172586,
+      "flat_ag": 0.027468810262887375
+    },
+    "primary_failures": [],
+    "secondary_quality_flags": [
+      "flat_noise",
+      "PSNR",
+      "SSIM",
+      "clipping"
+    ]
+  },
+  "best_unconstrained_event": {
+    "plan": "ag_010",
+    "epoch": 3,
+    "metrics": {
+      "MLI": 0.46748115817467084,
+      "CI": 0.24977666218068365,
+      "E": 7.6481202982954795,
+      "AG": 0.04425984041191065,
+      "PSNR": 14.735455907128062,
+      "SSIM": 0.4879162901121637,
+      "clipped_fraction": 0.02187584541062802,
+      "z_fixed_pdf": 2.327632834154199,
+      "awf_margin_six": 0.33676227264102643,
+      "pairs": 69,
+      "chroma_mae": 0.03308840626445801,
+      "chromaticity_mae": 0.039661259613121336,
+      "saturation": 0.1645972083012263,
+      "gt_saturation": 0.2977312960918399,
+      "saturation_mae": 0.1649464776172586,
+      "flat_ag": 0.027468810262887375
+    },
+    "primary_failures": [],
+    "secondary_quality_flags": [
+      "flat_noise",
+      "PSNR",
+      "SSIM",
+      "clipping"
+    ]
+  },
+  "selection_locked": true,
+  "passed_four_metric_floors": true,
+  "target_AG_010_achieved": false,
+  "near_AG_010_achieved": false,
+  "CI_022_achieved": true,
+  "primary_failures": [],
+  "output_config": {
+    "model": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\best_four_metrics.pt",
+    "model_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+    "reference": "checkpoints/training_reference.pt",
+    "reference_sha256": "9fe9c603d3b53a31eb66ab38528f8744378b7d0c5ed313637078ce301add82ab",
+    "manifest": "data/split-local.json",
+    "manifest_sha256": "b8f81a92034442604ee8527e32d672638026ab4b556ce450d7ac4bac4534ca2f",
+    "calibration": {
+      "mode": "linear",
+      "contrast": 1.08,
+      "detail": 0.25,
+      "sharpen": 1.4
+    },
+    "user_approved_as_final": false,
+    "selection_reason": "Highest AG with all four validation means >= retained parent; CI >=0.22; target AG 0.1 not yet achieved",
+    "architecture": "KinD Decomposition + Attention U-Net + Curve CNN",
+    "training_provenance": "experiments/ag_refinement/run_four_metric_curriculum",
+    "evaluation_report": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_four_metric_curriculum\\BAO_CAO_BON_CHI_SO.md",
+    "rgb_preservation": {
+      "blend": 1.0,
+      "gain": 0.5
+    },
+    "luminance_refinement": {
+      "contrast": 1.02,
+      "lift": 0.007
+    }
+  },
+  "frozen_decomposition_sha256": "94955952e65e0938619df2b27cc20d4630d2e135e960e170c1a5f2dd8f1e8413",
+  "changed_branches": {
+    "restoration": true,
+    "adjustment": true
+  },
+  "epochs": 6,
+  "seconds": 438.7688477000006,
+  "session_seconds": 521.9062950000002,
+  "peak_RAM_MiB": 2171.59,
+  "data_audit": {
+    "allowed_splits": [
+      "train",
+      "val"
+    ],
+    "unique_images_opened": {
+      "train": 1240,
+      "val": 138
+    },
+    "blocked_attempts": [],
+    "test_images_allowed": false
+  },
+  "resources": {
+    "os": "Windows-10-10.0.26300-SP0",
+    "python": "3.11.9",
+    "torch": "2.8.0+cpu",
+    "cpu": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "physical_cores": 8,
+    "logical_cores": 16,
+    "ram_gib": 13.76,
+    "device": "cpu",
+    "torch_threads": 6,
+    "process_rss_mib": 2089.2,
+    "peak_working_set_mib": 2171.59
+  },
+  "default_config_sha256": "c0ba8cc54857fee2eb95f47dc2121d58a02f2f4d5556765780eccdc9cdfcd086",
+  "default_checkpoint_sha256": "3796b93123aee3991fc364b1e9196fcf59090e55745f282418b07285a19d38d2",
+  "promoted_to_default": false,
+  "test_feedback_allowed": false,
+  "provenance_metadata_corrected_before_test": true
+}

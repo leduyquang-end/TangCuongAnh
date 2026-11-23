@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "checkpoint": "checkpoints/model_current.pt",
+  "checkpoint_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "full_test_PNGs_identical": 100,
+  "CLI_PNG_identical": true,
+  "architecture_parameters": 2217963,
+  "source_selection_sha256": "72dd9b6251bbf9e0ae5df0391a704dcfbbff6392b8c22c551b2ea5dbdb3f260b",
+  "data_audit": {
+    "allowed_splits": [
+      "test"
+    ],
+    "unique_images_opened": {
+      "test": 100
+    },
+    "blocked_attempts": [],
+    "test_images_allowed": true
+  },
+  "no_retraining": true,
+  "no_new_parameter_selection": true
+}

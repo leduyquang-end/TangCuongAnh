@@ -1,0 +1,41 @@
+{
+  "reference_methods": [
+    "AWF",
+    "AGCWD",
+    "SDD",
+    "CLAHE",
+    "RRM"
+  ],
+  "normalization": "fixed_original_five",
+  "ddof": 0,
+  "reference_mean": {
+    "MLI": 0.25346,
+    "CI": 0.1487,
+    "E": 6.6792,
+    "AG": 0.05878
+  },
+  "reference_std": {
+    "MLI": 0.04647771939327488,
+    "CI": 0.04552419137118198,
+    "E": 0.33038989693996396,
+    "AG": 0.03246742367358396
+  },
+  "model_test_metrics": {
+    "MLI": 0.48632755864084964,
+    "CI": 0.22716896271851372,
+    "E": 7.6442041176150735,
+    "AG": 0.051272188651890524
+  },
+  "model_z_per_metric": {
+    "MLI": 5.010305188824401,
+    "CI": 1.7236761456939718,
+    "E": 2.920803954820771,
+    "AG": -0.23124136437773335
+  },
+  "model_Z_estimated_from_rounded_table": 2.3558859812403528,
+  "AWF_Z_published": 1.4479,
+  "AWF_Z_recomputed_from_rounded_table": 1.447684280791872,
+  "rounding_difference": -0.00021571920812801793,
+  "model_checkpoint_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "note": "Display published AWF 1.4479; model Z is an estimate using the fixed original five reference rows, not a judge-certified score."
+}

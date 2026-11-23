@@ -1,0 +1,19 @@
+{
+  "user_requested_keep_pre_refinement_model": true,
+  "checkpoint": "checkpoints/model_current.pt",
+  "checkpoint_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "report": "reports/BAO_CAO_BAN_DA_CHOT_SO_VOI_AWF.md",
+  "experimental_candidates_inactive": true,
+  "configuration_unchanged": false,
+  "test_pairs": 100,
+  "source_metrics_sha256": "0ebe67c233a431444a677f102c1670d1d1d636f37a00755317a008fe83e03dd2",
+  "source_per_image_sha256": "408387c48e95f6e8b9a6dde8ee7313a9b442535b1ef56fba26d780e59919a74f",
+  "z_normalization": "fixed_original_five",
+  "AWF_Z_published": 1.4479,
+  "model_Z_estimated": 2.3558859812403528,
+  "z_details": "results/active_model/z_comparison_original_reference.json",
+  "inference_parameters_unchanged": true,
+  "report_metadata_updated_only": true,
+  "active_config_sha256": "249b52f4144bc1ae89afd3f567e380eabb16360d0a35a262173aa99bf2a1135d",
+  "experimental_artifacts_removed": true
+}

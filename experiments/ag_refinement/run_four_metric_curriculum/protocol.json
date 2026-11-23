@@ -1,0 +1,69 @@
+{
+  "parent_selection_sha256": "b31b28fce41dc68c7c0cf34131523425bc4684a2f9fc63126e6f438b72c4b3bc",
+  "manifest_sha256": "b8f81a92034442604ee8527e32d672638026ab4b556ce450d7ac4bac4534ca2f",
+  "initial_checkpoint": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\ag_refinement\\run_aligned_edges\\highest_AG.pt",
+  "initial_sha256": "3991fd884ccf9d5b214410143f95bf189af879f1108b2ce8921efba2baf2d707",
+  "output_config": {
+    "model": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\color_refinement\\run_20261113_all_gain_v2\\candidate.pt",
+    "model_sha256": "40f24b82f08a378c769ac13ab33b0e3d6f1581b0d1c74b14851f70b072775e46",
+    "reference": "checkpoints/training_reference.pt",
+    "reference_sha256": "9fe9c603d3b53a31eb66ab38528f8744378b7d0c5ed313637078ce301add82ab",
+    "manifest": "data/split-local.json",
+    "manifest_sha256": "b8f81a92034442604ee8527e32d672638026ab4b556ce450d7ac4bac4534ca2f",
+    "calibration": {
+      "mode": "linear",
+      "contrast": 1.08,
+      "detail": 0.25,
+      "sharpen": 1.4
+    },
+    "user_approved_as_final": false,
+    "selection_reason": "All four metrics increase on validation compared with retained RGB and original",
+    "architecture": "KinD Decomposition + Attention U-Net + Curve CNN",
+    "training_provenance": "experiments/color_refinement/run_20261113_v3",
+    "evaluation_report": "E:\\trenlop\\XuLyAnh\\Do_An_Tang_Cuong_Anh\\experiments\\color_refinement\\run_20261113_all_gain_v2\\BAO_CAO_TANG_DONG_THOI.md",
+    "rgb_preservation": {
+      "blend": 1.0,
+      "gain": 0.5
+    },
+    "luminance_refinement": {
+      "contrast": 1.02,
+      "lift": 0.007
+    }
+  },
+  "plans": [
+    {
+      "name": "ag_005",
+      "ag_target": 0.05,
+      "edge_gain": 2.5,
+      "epochs": 3,
+      "lr": 6e-05
+    },
+    {
+      "name": "ag_010",
+      "ag_target": 0.1,
+      "edge_gain": 4.0,
+      "epochs": 3,
+      "lr": 4e-05
+    }
+  ],
+  "training_branches": [
+    "restoration",
+    "adjustment"
+  ],
+  "frozen_branch": "decomposition",
+  "user_targets": {
+    "CI_min": 0.22,
+    "AG_target": 0.1,
+    "no_decline": [
+      "MLI",
+      "CI",
+      "E",
+      "AG"
+    ]
+  },
+  "near_AG_reporting_threshold": 0.095,
+  "primary_selection": "Max AG among candidates with all four validation means >= parent and CI>=.22",
+  "secondary_quality": "Report PSNR SSIM colour flat noise clipping separately; never call raised noise recovered detail",
+  "test_feedback_allowed": false,
+  "prior_project_test_exposure": true
+}

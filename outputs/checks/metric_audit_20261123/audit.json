@@ -1,0 +1,81 @@
+{
+  "verified": true,
+  "date": "2026-11-23",
+  "images": 100,
+  "checkpoint_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "protected_files_sha256": {
+    "checkpoints/model_current.pt": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+    "configs/model.json": "249b52f4144bc1ae89afd3f567e380eabb16360d0a35a262173aa99bf2a1135d",
+    "data/split-local.json": "b8f81a92034442604ee8527e32d672638026ab4b556ce450d7ac4bac4534ca2f"
+  },
+  "full_test_PNGs_identical": 100,
+  "independent_four_metric_recomputation": true,
+  "max_four_metric_error": 8.881784197001252e-15,
+  "max_PSNR_report_error": 0.0,
+  "max_SSIM_report_error": 0.0,
+  "mean": {
+    "MLI": 0.48632755864084964,
+    "CI": 0.22716896271851372,
+    "E": 7.6442041176150735,
+    "AG": 0.051272188651890524,
+    "PSNR": 13.92511534552785,
+    "SSIM": 0.5134490171074867,
+    "PSNR_from_saved_PNG": 13.924939173476284
+  },
+  "sample_SD": {
+    "MLI": 0.0461230259377455,
+    "CI": 0.0436919870705334,
+    "E": 0.2369293840439349,
+    "AG": 0.018520041095373987
+  },
+  "input_mean": {
+    "MLI": 0.056857069778267974,
+    "CI": 0.04229827105474588,
+    "E": 4.716085249069881,
+    "AG": 0.009555079137798106
+  },
+  "PDF_input_mean": {
+    "MLI": 0.05,
+    "CI": 0.0443,
+    "E": 4.5533,
+    "AG": 0.0129
+  },
+  "Z_fixed_original_five": 2.3558859812403528,
+  "AWF_Z_published": 1.4479,
+  "Z_recomputed_common_six": {
+    "AWF": 0.8737355173379918,
+    "AGCWD": 0.2570403160484666,
+    "SDD": -0.7602621142987416,
+    "CLAHE": -0.5747800886835509,
+    "RRM": -0.9954411819259301,
+    "Model": 1.1997075515217621
+  },
+  "four_metrics_domain": "Saved RGB uint8 PNG; luma weights 0.299/0.587/0.114; normalized 0..1",
+  "PSNR_SSIM_domain": "Float32 RGB prediction before PNG rounding; RGB GT normalized 0..1",
+  "scope": "Full deployed pipeline including calibration, RGB preservation and luminance refinement",
+  "AWF_rerun": false,
+  "official_grader_code_available": false,
+  "training_performed": false,
+  "parameter_selection_performed": false,
+  "prior_project_test_exposure": true,
+  "data_audit": {
+    "allowed_splits": [
+      "test"
+    ],
+    "unique_images_opened": {
+      "test": 200
+    },
+    "blocked_attempts": [],
+    "test_images_allowed": true
+  },
+  "seconds": 60.841231500000504,
+  "verified_scope": "Project numerical reproducibility only",
+  "contest_comparability_verified": false,
+  "published_input_matches_current_measurement": false,
+  "input_percent_difference": {
+    "MLI": 13.714139556535931,
+    "CI": -4.518575497187626,
+    "E": 3.5751048485687553,
+    "AG": -25.929619086836386
+  }
+}

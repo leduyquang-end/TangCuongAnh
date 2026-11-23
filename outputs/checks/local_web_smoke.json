@@ -1,0 +1,29 @@
+{
+  "verified": true,
+  "entrypoint": "app.py",
+  "launched_as_subprocess": true,
+  "started_outside_project_directory": true,
+  "checkpoint_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0",
+  "real_HTTP_upload": true,
+  "multiple_images_verified": true,
+  "file_and_folder_controls_present": true,
+  "input_and_output_previews_verified": true,
+  "invalid_upload_rejected": true,
+  "local_access_checks_passed": true,
+  "approved_checkpoint_unchanged": true,
+  "training_performed": false,
+  "results": [
+    {
+      "id": "00690",
+      "RGB": true,
+      "pixel_identical_to_approved": true,
+      "seconds": 0.678
+    },
+    {
+      "id": "00691",
+      "RGB": true,
+      "pixel_identical_to_approved": true,
+      "seconds": 0.406
+    }
+  ]
+}

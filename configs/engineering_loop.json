@@ -1,0 +1,46 @@
+{
+  "max_trials": 4,
+  "epochs_per_trial": 2,
+  "patience": 3,
+  "max_minutes": 20,
+  "threads": 6,
+  "minimum_z_gain": 0.0001,
+  "initial_metric_reward": 0.03,
+  "quality_limits": {
+    "psnr_drop_db": 0.2,
+    "ssim_drop": 0.005,
+    "chroma_ratio_max": 1.05,
+    "clipping_max": 0.01
+  },
+  "search_bounds": {
+    "lr": [
+      3e-06,
+      5e-05
+    ],
+    "decomposition_lr": [
+      1e-07,
+      1e-06
+    ],
+    "structure": [
+      0.1,
+      0.4
+    ],
+    "metric_reward_weight": [
+      0.0,
+      0.1
+    ],
+    "extra_weights.brightness_anchor": [
+      1.5,
+      12.0
+    ],
+    "extra_weights.entropy_anchor": [
+      0.0,
+      0.5
+    ],
+    "extra_weights.reference_pixels": [
+      0.2,
+      1.0
+    ]
+  },
+  "policy_version": "adaptive_backoff_v2"
+}

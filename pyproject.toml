@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kind-enhance"
+version = "1.0.0"
+description = "Local RGB low-light enhancement with KinD, Attention U-Net and Curve CNN"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy==2.2.6", "Pillow==11.3.0", "psutil==7.0.0", "torch==2.8.0"]
+
+[project.scripts]
+kind-enhance = "kind_enhance.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["kind_enhance*", "tools*"]
+exclude = ["tests*", "experiments*", "data*", "doc*"]
+
+[tool.setuptools.package-data]
+"kind_enhance.ui" = ["web/*.html", "web/*.css", "web/*.js"]

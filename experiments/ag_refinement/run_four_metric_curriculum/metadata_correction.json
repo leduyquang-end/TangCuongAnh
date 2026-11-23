@@ -1,0 +1,6 @@
+{
+  "before_selection_sha256": "01d0f1c8da9a6c15e2c21e6b8e570cc5959011910b618f6d98be02bf07d64bd7",
+  "after_selection_sha256": "72dd9b6251bbf9e0ae5df0391a704dcfbbff6392b8c22c551b2ea5dbdb3f260b",
+  "reason": "Correct inherited report/training labels before any test access; no weights or inference parameters changed",
+  "checkpoint_sha256": "902c100e7455dd23946f9de7891c2e4f730427149f3604f9dcdabb4e79c747d0"
+}

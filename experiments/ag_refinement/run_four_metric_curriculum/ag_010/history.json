@@ -1,0 +1,133 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 6.805077811210386,
+    "validation": {
+      "MLI": 0.45826551731126264,
+      "CI": 0.25107476641589666,
+      "E": 7.651730936094483,
+      "AG": 0.03915141070722854,
+      "PSNR": 14.81442564380813,
+      "SSIM": 0.5163981121951255,
+      "clipped_fraction": 0.019306159420289855,
+      "z_fixed_pdf": 2.2485883400336952,
+      "awf_margin_six": 0.29393292643196345,
+      "pairs": 69,
+      "chroma_mae": 0.03324509023999175,
+      "chromaticity_mae": 0.03947634365328628,
+      "saturation": 0.1648986031287822,
+      "gt_saturation": 0.2977312960918399,
+      "saturation_mae": 0.16463473250252614,
+      "flat_ag": 0.023358610472169476,
+      "primary_failures": [],
+      "secondary_quality_flags": [
+        "color",
+        "flat_noise",
+        "PSNR",
+        "SSIM",
+        "clipping"
+      ]
+    },
+    "seconds": 71.48786370000016,
+    "resources": {
+      "os": "Windows-10-10.0.26300-SP0",
+      "python": "3.11.9",
+      "torch": "2.8.0+cpu",
+      "cpu": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+      "physical_cores": 8,
+      "logical_cores": 16,
+      "ram_gib": 13.76,
+      "device": "cpu",
+      "torch_threads": 6,
+      "process_rss_mib": 2079.23,
+      "peak_working_set_mib": 2167.31
+    }
+  },
+  {
+    "epoch": 2,
+    "train_loss": 6.719587406035393,
+    "validation": {
+      "MLI": 0.45579779513308705,
+      "CI": 0.25142998696163,
+      "E": 7.657081589524457,
+      "AG": 0.041061850267664,
+      "PSNR": 14.709803793308257,
+      "SSIM": 0.5043887543505516,
+      "clipped_fraction": 0.02129897342995169,
+      "z_fixed_pdf": 2.2560245560757175,
+      "awf_margin_six": 0.3062632745741184,
+      "pairs": 69,
+      "chroma_mae": 0.033391035715307014,
+      "chromaticity_mae": 0.03982620614081405,
+      "saturation": 0.16447232879590298,
+      "gt_saturation": 0.2977312960918399,
+      "saturation_mae": 0.16502636878926685,
+      "flat_ag": 0.02500606012409148,
+      "primary_failures": [],
+      "secondary_quality_flags": [
+        "color",
+        "flat_noise",
+        "PSNR",
+        "SSIM",
+        "clipping"
+      ]
+    },
+    "seconds": 71.86944369999992,
+    "resources": {
+      "os": "Windows-10-10.0.26300-SP0",
+      "python": "3.11.9",
+      "torch": "2.8.0+cpu",
+      "cpu": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+      "physical_cores": 8,
+      "logical_cores": 16,
+      "ram_gib": 13.76,
+      "device": "cpu",
+      "torch_threads": 6,
+      "process_rss_mib": 2096.41,
+      "peak_working_set_mib": 2167.31
+    }
+  },
+  {
+    "epoch": 3,
+    "train_loss": 6.6502207694515105,
+    "validation": {
+      "MLI": 0.46748115817467084,
+      "CI": 0.24977666218068365,
+      "E": 7.6481202982954795,
+      "AG": 0.04425984041191065,
+      "PSNR": 14.735455907128062,
+      "SSIM": 0.4879162901121637,
+      "clipped_fraction": 0.02187584541062802,
+      "z_fixed_pdf": 2.327632834154199,
+      "awf_margin_six": 0.33676227264102643,
+      "pairs": 69,
+      "chroma_mae": 0.03308840626445801,
+      "chromaticity_mae": 0.039661259613121336,
+      "saturation": 0.1645972083012263,
+      "gt_saturation": 0.2977312960918399,
+      "saturation_mae": 0.1649464776172586,
+      "flat_ag": 0.027468810262887375,
+      "primary_failures": [],
+      "secondary_quality_flags": [
+        "flat_noise",
+        "PSNR",
+        "SSIM",
+        "clipping"
+      ]
+    },
+    "seconds": 73.00261910000017,
+    "resources": {
+      "os": "Windows-10-10.0.26300-SP0",
+      "python": "3.11.9",
+      "torch": "2.8.0+cpu",
+      "cpu": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+      "physical_cores": 8,
+      "logical_cores": 16,
+      "ram_gib": 13.76,
+      "device": "cpu",
+      "torch_threads": 6,
+      "process_rss_mib": 2099.7,
+      "peak_working_set_mib": 2171.59
+    }
+  }
+]
