@@ -26,6 +26,8 @@ Môi trường `.venv` hiện tại đã có đủ thư viện. Ứng dụng kh�
 
 ## Tài liệu
 
+[Báo cáo đầy đủ về mô hình, lý do chọn và các điểm yếu](doc/3_san_pham/BAO_CAO_MO_HINH_VA_DANH_GIA.md) — phân biệt ba mạng học, hậu xử lý, nhánh GT và giới hạn đối chiếu AWF.
+
 Bộ Markdown trong **[doc/README.md](doc/README.md)** có đúng ba nhóm:
 
 1. Tổng quan: cấu trúc, sử dụng, lưu ý, vibe code, quy trình dự án.

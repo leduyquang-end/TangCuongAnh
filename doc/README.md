@@ -18,6 +18,8 @@ Bộ tài liệu Markdown cho ứng dụng đang chạy. Điểm bắt đầu: [
 
 ## 3. Sản phẩm
 
+- [Báo cáo mô hình: lý do chọn, vấn đề giải quyết, điểm yếu và kết quả thực đo](3_san_pham/BAO_CAO_MO_HINH_VA_DANH_GIA.md)
+
 - [3.1 Changelog](3_san_pham/3.1_changelog.md)
 - [3.2 Roadmap](3_san_pham/3.2_roadmap.md)
 - [Giao diện đã chạy thực tế](3_san_pham/assets/giao_dien_ung_dung.png)
